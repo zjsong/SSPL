@@ -229,7 +229,7 @@ class NetWrapper(torch.nn.Module):
 
     def att_map_weight(self, vis_feat_map, audio_feat_vec):
 
-        # normalize audio-visual representation
+        # normalize visual feature
         B, C, H, W = vis_feat_map.size()
         vis_feat_map_trans = F.normalize(vis_feat_map, p=2, dim=1)
         vis_feat_map_trans = vis_feat_map_trans.view(B, C, H * W)
@@ -240,20 +240,21 @@ class NetWrapper(torch.nn.Module):
         audio_feat_vec = audio_feat_vec.unsqueeze(2)  # B x C x 1
 
         # similarity/attention map
-        att_map_orig = torch.matmul(vis_feat_map_trans, audio_feat_vec)   # B x (HW) x 1
+        att_map_orig = torch.matmul(vis_feat_map_trans, audio_feat_vec)  # B x (HW) x 1
 
-        # normalization
+        # min-max normalization on similarity map
         att_map = torch.squeeze(att_map_orig)  # B x (HW)
         att_map = (att_map - torch.min(att_map, dim=1, keepdim=True).values) / \
-                  (torch.max(att_map, dim=1, keepdim=True).values - torch.min(att_map, dim=1, keepdim=True).values + 1e-10)
+                  (torch.max(att_map, dim=1, keepdim=True).values - torch.min(att_map, dim=1,
+                                                                              keepdim=True).values + 1e-10)
         att_map = att_map.unsqueeze(2)  # B x (HW) x 1
 
-        # weight visual feature map
-        vis_feat_map = vis_feat_map.view(B, C, -1)   # B x C x (HW)
-        z = torch.matmul(vis_feat_map, att_map)   # B x C x 1
-        z = torch.squeeze(z)   # B x C
+        # audio-visual representation
+        vis_feat_map = vis_feat_map.view(B, C, -1)  # B x C x (HW)
+        fav = torch.matmul(vis_feat_map, att_map)  # B x C x 1
+        fav = torch.squeeze(fav)  # B x C
 
-        return z,  att_map_orig.view(B, H, W), att_map.view(B, H, W)
+        return fav, att_map_orig.view(B, H, W), att_map.view(B, H, W)
 
 
 def train(netWrapper, loader, optimizer, history, epoch, gpu, args):
