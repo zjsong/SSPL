@@ -17,7 +17,7 @@ from models import ModelBuilder
 from dataset.videodataset import VideoDataset
 
 from arguments_test import ArgParser
-from utils import makedirs, AverageMeter, save_visual_eval, plot_loss_metrics, normalize_img, testset_gt
+from utils import makedirs, AverageMeter, save_visual_eval, normalize_img, testset_gt
 
 warnings.filterwarnings('ignore')
 
