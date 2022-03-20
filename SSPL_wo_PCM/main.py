@@ -114,7 +114,6 @@ def main_worker(gpu, args):
     ################################
     # data
     ################################
-    # dataset and Loader
     dataset_train = VideoDataset(args, mode='train')
     dataset_test = VideoDataset(args, mode='test')
 
