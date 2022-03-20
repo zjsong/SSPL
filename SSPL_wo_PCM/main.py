@@ -341,12 +341,10 @@ def evaluate(netWrapper, loader, history, epoch, args):
     # compute cIoU and AUC on whole dataset
     results_orig_sim = []
     for i in range(21):
-        # original similarity map
         result_orig_sim = np.sum(np.array(ciou_orig_sim) >= 0.05 * i)
         result_orig_sim = result_orig_sim / len(ciou_orig_sim)
         results_orig_sim.append(result_orig_sim)
 
-    # normalized similarity map
     x = [0.05 * i for i in range(21)]
     cIoU_orig_sim = np.sum(np.array(ciou_orig_sim) >= 0.5) / len(ciou_orig_sim)
     AUC_orig_sim = auc(x, results_orig_sim)
