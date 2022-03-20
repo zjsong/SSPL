@@ -160,7 +160,6 @@ def main_worker(gpu, args):
         args.epoch_iters = len(dataset_train) // args.batch_size
         print('1 Epoch = {} iters'.format(args.epoch_iters))
 
-        # evaluate self-supervised learning loss
         history['train']['epoch'].append(0)
         history['train']['loss'].append(1)
         evaluate(netWrapper, loader_test, history, 0, args)
