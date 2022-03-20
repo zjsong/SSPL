@@ -239,7 +239,7 @@ class NetWrapper(torch.nn.Module):
         audio_feat_vec = F.normalize(audio_feat_vec, p=2, dim=1)
         audio_feat_vec = audio_feat_vec.unsqueeze(2)  # B x C x 1
 
-        # LOCALIZATION MODULE
+        # similarity/attention map
         att_map_orig = torch.matmul(vis_feat_map_trans, audio_feat_vec)   # B x (HW) x 1
 
         # normalization
