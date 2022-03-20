@@ -13,7 +13,7 @@ weights_vggish_pca = "./models/torchvggish/torchvggish/vggish_pretrained/vggish_
 
 class ArgParser(object):
     def __init__(self):
-        parser = argparse.ArgumentParser(description='Sound Source Localization with Existing Visual Backbones')
+        parser = argparse.ArgumentParser(description='Self-Supervised Sound Source Localization')
 
         # -----------------------------
         # Misc
