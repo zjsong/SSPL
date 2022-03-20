@@ -163,7 +163,7 @@ class NetWrapper(torch.nn.Module):
         vis_feat_view2 = self.net_frame(image_view2)
         feat_view2, sim_map_view2, att_map_view2 = self.att_map_weight(vis_feat_view2, audio_feat_trans)
 
-        # 3. compute similarity between vis_feat and audio_feat_trans
+        # 3. compute projections and predictions
         p1, p2, z1, z2 = self.net_ssl_head(feat_view1, feat_view2)
 
         # 4. self-supervised learning (SSL) loss
