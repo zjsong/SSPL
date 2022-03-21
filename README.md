@@ -30,7 +30,7 @@ In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
 
 
 ## Requirements
-We have tested the code on the following environments:
+We have tested the code on the following environment:
 * Python 3.8.6 | PyTorch 1.6.0 | torchvision 0.7.0 | CUDA 11.0 | Ubuntu 16.04.7
 
 
@@ -42,7 +42,7 @@ with [youtube-dl](https://github.com/ytdl-org/youtube-dl) if only the YouTube ID
 for details of pre-processing video frame and audio signals. To improve data loading efficiency, we use [h5py](https://docs.h5py.org/en/stable/build.html) 
 to respectively group frames, audios, and spectrograms, before training.
 
-Take SoundNet_Flickr for example, the final data should be placed in the following structure.
+Take SoundNet-Flickr for example, the final data should be placed in the following structure:
 ```
 Datasets
 │
@@ -111,7 +111,7 @@ We utilize [VGG16](https://arxiv.org/pdf/1409.1556.pdf%E3%80%82) and [VGGish](ht
 to extract visual and audio features, respectively. Before training, we need to place pre-trained VGGish weights, 
 i.e., [vggish-10086976.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish-10086976.pth) and 
 [vggish_pca_params-970ea276.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish_pca_params-970ea276.pth) 
-in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on SoundNet_Flickr10k with default setting, just run:
+in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on SoundNet-Flickr10k with default setting, just run:
 ```
 python main.py
 ```
@@ -120,7 +120,7 @@ to select models and avoid overfitting.
 
 ### Test
 After training, ```frame_best.pth```, ```sound_best.pth```, ```ssl_head_best.pth``` (and ```pcm_best.pth``` for SSPL (w/ PCM)) 
-can be obtained, and we need to place them in ```models/pretrain/``` before testing. To test SSPL on SoundNet_Flickr 
+can be obtained, and we need to place them in ```models/pretrain/``` before testing. To test SSPL on SoundNet-Flickr 
 with default setting, just run:
 ```
 python test.py
