@@ -1,0 +1,4 @@
+Save pretrained modes in this folder for evaluation:
+frame_best.pth
+sound_best.pth
+ssl_head_best.pth

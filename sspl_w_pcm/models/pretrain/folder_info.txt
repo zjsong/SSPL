@@ -1,0 +1,5 @@
+Save pretrained modes here for evaluation:
+frame_best.pth
+pcm_best.pth
+sound_best.pth
+ssl_head_best.pth
