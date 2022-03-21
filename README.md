@@ -12,7 +12,6 @@ Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Loc
 In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
 [Paper] [arXiv] <br/>
 
-
 > **Abstract:** *Sound source localization in visual scenes aims to localize objects emitting the sound in a given image. 
 > Recent works showing impressive localization performance typically rely on the contrastive learning framework. 
 > However, the random sampling of negatives, as commonly adopted in these methods, can result in misalignment between audio 
@@ -103,7 +102,10 @@ Datasets
     |       |
     └───vggss_test_4692.csv
 ```
-**Note:** We provide ```flickr_test249_in5k.csv```, ```vggss_test_4692.csv```, and ```vggss_test_5158.json``` in ```metadata/```.
+**Note:**
+* We provide ```flickr_test249_in5k.csv```, ```vggss_test_4692.csv```, and ```vggss_test_5158.json``` in ```metadata/```.
+* Before training and testing, you should specify ```data_path = "path to Datasets"``` in ```arguments_train.py``` and ```arguments_test.py``` accordingly.
+
 
 ## Usage
 ### Training
