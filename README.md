@@ -120,7 +120,7 @@ in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on Sou
 ```
 python main.py
 ```
-**Note:** We found that learning rates have vital influence on SSPL's performance. So we recommend to use the early stopping strategy 
+**Note:** We found that learning rates have vital influence on SSPL's performance. So we suggest that using the early stopping strategy 
 to select hyperparameters and avoid overfitting.
 
 ### Test
