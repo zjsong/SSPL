@@ -4,8 +4,11 @@ This repository hosts the PyTorch code for our self-supervised sound source loca
 
 ## Paper
 Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Localization in Visual Scenes <br/>
-[Zengjie Song](https://zjsong.github.io/)<sup>1</sup>, [Yuxi Wang]<sup>1,3</sup>, [Junsong Fan]<sup>1,2</sup>, 
-[Tieniu Tan](http://cripac.ia.ac.cn/tnt/)<sup>1,2</sup>, [Zhaoxiang Zhang](https://zhaoxiangzhang.net/)<sup>1,2,3</sup> <br/>
+[Zengjie Song](https://zjsong.github.io/)<sup>1</sup>, 
+[Yuxi Wang](https://scholar.google.com/citations?hl=en&user=waLCodcAAAAJ)<sup>1,3</sup>, 
+[Junsong Fan](https://scholar.google.com/citations?user=AfK4UcUAAAAJ&hl=en&oi=ao)<sup>1,2</sup>, 
+[Tieniu Tan](http://cripac.ia.ac.cn/tnt/)<sup>1,2</sup>, 
+[Zhaoxiang Zhang](https://zhaoxiangzhang.net/)<sup>1,2,3</sup> <br/>
 <sup>1</sup>Center for Research on Intelligent Perception and Computing, NLPR, CASIA <br/>
 <sup>2</sup>University of Chinese Academy of Sciences (UCAS) <br/>
 <sup>3</sup>Centre for Artificial Intelligence and Robotics, HKISI_CAS <br/>
