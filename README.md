@@ -5,7 +5,7 @@ This repository hosts the PyTorch code for our self-supervised sound source loca
 ## Paper
 Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Localization in Visual Scenes <br/>
 [Zengjie Song](https://zjsong.github.io/)<sup>1</sup>, [Yuxi Wang]<sup>1,3</sup>, [Junsong Fan]<sup>1,2</sup>, 
-[Tieniu Tan]<sup>1,2</sup>, [Zhaoxiang Zhang](https://zhaoxiangzhang.net/)<sup>1,2,3</sup> <br/>
+[Tieniu Tan](http://cripac.ia.ac.cn/tnt/)<sup>1,2</sup>, [Zhaoxiang Zhang](https://zhaoxiangzhang.net/)<sup>1,2,3</sup> <br/>
 <sup>1</sup>Center for Research on Intelligent Perception and Computing, NLPR, CASIA <br/>
 <sup>2</sup>University of Chinese Academy of Sciences (UCAS) <br/>
 <sup>3</sup>Centre for Artificial Intelligence and Robotics, HKISI_CAS <br/>
@@ -118,7 +118,7 @@ in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on Sou
 python main.py
 ```
 **Note:** We found that learning rates have vital influence on SSPL's performance. So we recommend to use the early stopping strategy 
-to select models and avoid overfitting.
+to select hyperparameters and avoid overfitting.
 
 ### Test
 After training, ```frame_best.pth```, ```sound_best.pth```, ```ssl_head_best.pth``` (and ```pcm_best.pth``` for SSPL (w/ PCM)) 
@@ -142,5 +142,6 @@ Please consider citing our paper in your publications if the project helps your 
 
 
 ## Acknowledgement
-Our code is based on [Attention](https://github.com/ardasnck/learning_to_localize_sound_source) and 
-[HardWay](https://github.com/hche11/Localizing-Visual-Sounds-the-Hard-Way). We thank the authors for sharing their code.
+Our code is partially based on [Attention](https://github.com/ardasnck/learning_to_localize_sound_source), 
+[HardWay](https://github.com/hche11/Localizing-Visual-Sounds-the-Hard-Way), and [SimSiam](https://github.com/PatrickHua/SimSiam). 
+We thank the authors for sharing their code.
