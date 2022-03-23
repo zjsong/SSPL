@@ -28,7 +28,7 @@ In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
 > localization benchmarks. In particular, SSPL achieves significant improvements of 8.6% cIoU and 3.4% AUC on SoundNet-Flickr 
 > compared to the previous best.*
 
-<img width="100%" src="images/sspl_framework.png" />
+<img width="100%" src="sspl_framework.png" />
 
 
 ## Requirements
