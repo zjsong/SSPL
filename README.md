@@ -3,17 +3,14 @@ This repository hosts the PyTorch code for our self-supervised sound source loca
 
 
 ## Paper
-Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Localization in Visual Scenes <br/>
-[Zengjie Song](https://zjsong.github.io/)<sup>1</sup>, 
-[Yuxi Wang](https://scholar.google.com/citations?hl=en&user=waLCodcAAAAJ)<sup>1,3</sup>, 
-[Junsong Fan](https://scholar.google.com/citations?user=AfK4UcUAAAAJ&hl=en&oi=ao)<sup>1,2</sup>, 
-[Tieniu Tan](http://cripac.ia.ac.cn/tnt/)<sup>1,2</sup>, 
-[Zhaoxiang Zhang](https://zhaoxiangzhang.net/)<sup>1,2,3</sup> <br/>
-<sup>1</sup>Center for Research on Intelligent Perception and Computing, NLPR, CASIA <br/>
-<sup>2</sup>University of Chinese Academy of Sciences (UCAS) <br/>
-<sup>3</sup>Centre for Artificial Intelligence and Robotics, HKISI_CAS <br/>
+**Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Localization in Visual Scenes** <br/>
+[Zengjie Song](https://zjsong.github.io/), 
+[Yuxi Wang](https://scholar.google.com/citations?hl=en&user=waLCodcAAAAJ), 
+[Junsong Fan](https://scholar.google.com/citations?user=AfK4UcUAAAAJ&hl=en&oi=ao), 
+[Tieniu Tan](http://cripac.ia.ac.cn/tnt/), 
+[Zhaoxiang Zhang](https://zhaoxiangzhang.net/) <br/>
 In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
-[Paper] [arXiv] <br/>
+[Paper] [[arXiv](https://arxiv.org/pdf/2203.13412.pdf)] <br/>
 
 > **Abstract:** *Sound source localization in visual scenes aims to localize objects emitting the sound in a given image. 
 > Recent works showing impressive localization performance typically rely on the contrastive learning framework. 
@@ -41,7 +38,7 @@ We train models on respectively two video datasets: [SoundNet-Flickr](http://sou
 while testing on two corresponding benchmarks: [test set](https://github.com/ardasnck/learning_to_localize_sound_source) of SoundNet-Flickr 
 and [test set](https://www.robots.ox.ac.uk/~vgg/research/lvs/) (i.e., VGG-Sound Source) of VGG-Sound. Videos are downloaded 
 with [youtube-dl](https://github.com/ytdl-org/youtube-dl) if only the YouTube IDs are given. Please see main text (Sec. 4.2) 
-for details of pre-processing video frame and audio signals. To improve data loading efficiency, we use [h5py](https://docs.h5py.org/en/stable/build.html) 
+for details of pre-processing video frames and audio signals. To improve data loading efficiency, we use [h5py](https://docs.h5py.org/en/stable/build.html) 
 to respectively group frames, audios, and spectrograms, before training.
 
 Take SoundNet-Flickr for example, the final data should be placed in the following structure:
@@ -113,10 +110,10 @@ Datasets
 ## Usage
 ### Training
 We utilize [VGG16](https://arxiv.org/pdf/1409.1556.pdf%E3%80%82) and [VGGish](https://github.com/harritaylor/torchvggish) as backbones 
-to extract visual and audio features, respectively. Before training, we need to place pre-trained VGGish weights, 
+to extract visual and audio features, respectively. Before training, you need to place pre-trained VGGish weights, 
 i.e., [vggish-10086976.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish-10086976.pth) and 
 [vggish_pca_params-970ea276.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish_pca_params-970ea276.pth) 
-in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on SoundNet-Flickr10k with default setting, just run:
+in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on SoundNet-Flickr10k with default setting, simply run:
 ```
 python main.py
 ```
@@ -125,8 +122,8 @@ to select hyper-parameters and avoid overfitting.
 
 ### Test
 After training, ```frame_best.pth```, ```sound_best.pth```, ```ssl_head_best.pth``` (and ```pcm_best.pth``` for SSPL (w/ PCM)) 
-can be obtained, and we need to place them in ```models/pretrain/``` before testing. To test SSPL on SoundNet-Flickr 
-with default setting, just run:
+can be obtained, and you need to place them in ```models/pretrain/``` before testing. To test SSPL on SoundNet-Flickr 
+with default setting, simply run:
 ```
 python test.py
 ```
