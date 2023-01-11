@@ -1,5 +1,5 @@
 """
-Read frame, audio, and spectrogram data using given video ids, and then save as hdf5, respectively.
+Read frame and audio data using given video ids, and then save as hdf5, respectively.
 """
 
 
