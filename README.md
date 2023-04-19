@@ -30,7 +30,7 @@ In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
 
 ## Requirements
 We have tested the code on the following environment:
-* Python 3.8.6 | PyTorch 1.6.0 | torchvision 0.7.0 | CUDA 11.0 | Ubuntu 16.04.7
+* Python 3.8.6 | PyTorch 1.6.0 | torchvision 0.7.0 | CUDA 10.1 | Ubuntu 16.04.7
 
 
 ## Download & pre-process videos
