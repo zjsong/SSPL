@@ -136,6 +136,7 @@ Please consider citing our paper in your publications if the project helps your 
   title={Self-Supervised Predictive Learning: A Negative-Free Method for Sound Source Localization in Visual Scenes},
   author={Song, Zengjie and Wang, Yuxi and Fan, Junsong and Tan, Tieniu and Zhang, Zhaoxiang},
   booktitle={Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  pages={3222--3231},
   year={2022}
 }
 ```
