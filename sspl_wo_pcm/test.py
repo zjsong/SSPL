@@ -1,7 +1,5 @@
 import os
-import time
 import json
-import math
 import random
 import warnings
 import cv2
@@ -38,7 +36,7 @@ def main():
     args.vis = os.path.join(args.ckpt, 'visualization/')
 
     args.world_size = args.num_gpus * args.nodes
-    os.environ['MASTER_ADDR'] = '172.18.33.22'  # specified by yourself
+    os.environ['MASTER_ADDR'] = 'xxx.xx.xx.xx'  # specified by yourself
     os.environ['MASTER_PORT'] = '8899'  # specified by yourself
     os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_ids
@@ -64,7 +62,6 @@ def main_worker(gpu, args):
     net_sound = builder.build_sound(
         arch=args.arch_sound,
         weights_vggish=args.weights_vggish,
-        weights_vggish_pca=args.weights_vggish_pca,
         out_dim=args.out_dim
     )
     net_ssl_head = builder.build_selfsuperlearn_head(
