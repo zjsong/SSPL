@@ -111,8 +111,7 @@ Datasets
 ### Training
 We utilize [VGG16](https://arxiv.org/pdf/1409.1556.pdf%E3%80%82) and [VGGish](https://github.com/harritaylor/torchvggish) as backbones 
 to extract visual and audio features, respectively. Before training, you need to place pre-trained VGGish weights, 
-i.e., [vggish-10086976.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish-10086976.pth) and 
-[vggish_pca_params-970ea276.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish_pca_params-970ea276.pth) 
+i.e., [vggish-10086976.pth](https://github.com/harritaylor/torchvggish/releases/download/v0.1/vggish-10086976.pth), 
 in ```models/torchvggish/torchvggish/vggish_pretrained/```. To train SSPL on SoundNet-Flickr10k with default setting, simply run:
 ```
 python main.py
