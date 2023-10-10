@@ -123,7 +123,7 @@ def _vgg():
 
 
 class VGGish(VGG):
-    def __init__(self, weights_vggish, weights_vggish_pca, out_dim=512,
+    def __init__(self, weights_vggish, weights_vggish_pca=None, out_dim=512,
                  pretrained=True, preprocess=False, postprocess=False):
         super().__init__(make_layers())
         if pretrained:
