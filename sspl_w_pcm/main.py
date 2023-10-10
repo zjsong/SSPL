@@ -2,7 +2,6 @@ import os
 import cv2
 import time
 import json
-import math
 import random
 import warnings
 import numpy as np
@@ -54,7 +53,7 @@ def main():
     args.best_ciou = -float("inf")
 
     args.world_size = args.num_gpus * args.nodes
-    os.environ['MASTER_ADDR'] = '172.18.33.22'  # specified by yourself
+    os.environ['MASTER_ADDR'] = 'xxx.xx.xx.xx'  # specified by yourself
     os.environ['MASTER_PORT'] = '8899'  # specified by yourself
     os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_ids
@@ -80,7 +79,6 @@ def main_worker(gpu, args):
     net_sound = builder.build_sound(
         arch=args.arch_sound,
         weights_vggish=args.weights_vggish,
-        weights_vggish_pca=args.weights_vggish_pca,
         out_dim=args.out_dim
     )
     net_pc = builder.build_feat_fusion_pc(cycs_in=args.cycs_pcm,

@@ -8,7 +8,6 @@ import argparse
 
 data_path = "path to Datasets"    # e.g., /home/xxx/Datasets/
 weights_vggish = "./models/torchvggish/torchvggish/vggish_pretrained/vggish-10086976.pth"
-weights_vggish_pca = "./models/torchvggish/torchvggish/vggish_pretrained/vggish_pca_params-970ea276.pth"
 
 
 class ArgParser(object):
@@ -65,8 +64,6 @@ class ArgParser(object):
                             help='whether fine-tune frame network, 1 for True and 0 for False')
         parser.add_argument('--weights_vggish', default=weights_vggish,
                             help="pre-trained weights of vggish (features + embeddings)")
-        parser.add_argument('--weights_vggish_pca', default=weights_vggish_pca,
-                            help="pre-trained weights of vggish (pca)")
 
         parser.add_argument('--dim_f_aud', default=128, type=int,
                             help='dimensionality of original sound net')

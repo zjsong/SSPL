@@ -12,7 +12,6 @@ weights_sound = "./models/pretrain/sound_best.pth"
 weights_pcm = "./models/pretrain/pcm_best.pth"
 weights_ssl_head = "./models/pretrain/ssl_head_best.pth"
 weights_vggish = "./models/torchvggish/torchvggish/vggish_pretrained/vggish-10086976.pth"
-weights_vggish_pca = "./models/torchvggish/torchvggish/vggish_pretrained/vggish_pca_params-970ea276.pth"
 
 
 class ArgParser(object):
@@ -79,8 +78,6 @@ class ArgParser(object):
                             help="weights of net_ssl_head")
         parser.add_argument('--weights_vggish', default=weights_vggish,
                             help="pre-trained weights of vggish (features + embeddings)")
-        parser.add_argument('--weights_vggish_pca', default=weights_vggish_pca,
-                            help="pre-trained weights of vggish (pca)")
 
         parser.add_argument('--dim_f_aud', default=128, type=int,
                             help='dimensionality of original sound net')
