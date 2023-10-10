@@ -10,7 +10,7 @@ This repository hosts the PyTorch code for our self-supervised sound source loca
 [Tieniu Tan](http://cripac.ia.ac.cn/tnt/), 
 [Zhaoxiang Zhang](https://zhaoxiangzhang.net/) <br/>
 In Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR), 2022 <br/>
-[Paper] [[arXiv](https://arxiv.org/pdf/2203.13412.pdf)] <br/>
+[[Paper](https://zjsong.github.io/index_files/2022cvpr_sspl.pdf)] [[arXiv](https://arxiv.org/abs/2203.13412)] <br/>
 
 > **Abstract:** *Sound source localization in visual scenes aims to localize objects emitting the sound in a given image. 
 > Recent works showing impressive localization performance typically rely on the contrastive learning framework. 
