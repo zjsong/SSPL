@@ -239,8 +239,8 @@ def ResNet18_(pretrained=False, progress=True, modal='vision', resnet18_imgnet=N
     return _resnet('resnet18', BasicBlock, [2, 2, 2, 2], pretrained, progress, modal, resnet18_imgnet, **kwargs)
 
 
-def VGGish128(weights_vggish, weights_vggish_pca, out_dim):
-    return VGGish(weights_vggish=weights_vggish, weights_vggish_pca=weights_vggish_pca, out_dim=out_dim)
+def VGGish128(weights_vggish, out_dim):
+    return VGGish(weights_vggish=weights_vggish, out_dim=out_dim)
 
 
 
