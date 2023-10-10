@@ -24,10 +24,10 @@ class ModelBuilder():
 
         return net_frame
 
-    def build_sound(self, arch='vggish', weights_vggish=None, weights_vggish_pca=None, out_dim=512):
+    def build_sound(self, arch='vggish', weights_vggish=None, out_dim=512):
 
         if arch == 'vggish':
-            net_sound = VGGish128(weights_vggish, weights_vggish_pca, out_dim)
+            net_sound = VGGish128(weights_vggish, out_dim)
             for p in net_sound.features.parameters():
                 p.requires_grad = False
             for p in net_sound.embeddings.parameters():
