@@ -79,15 +79,15 @@ class ArgParser(object):
         # -----------------------------
         parser.add_argument('--gpu_ids', default='0,1', type=str)
         parser.add_argument('--num_gpus', default=2, type=int,
-                            help='number of gpus to use')
+                            help='number of gpus to use within a node')
         parser.add_argument('--batch_size_per_gpu', default=128, type=int,
                             help='batch size for each gpu')
         parser.add_argument('--workers', default=8, type=int,
                             help='number of data loading workers')
         parser.add_argument('--nodes', default=1, type=int, metavar='N',
-                            help='number of data loading workers (default: 1)')
+                            help='number of nodes for distributed training')
         parser.add_argument('--nr', default=0, type=int,
-                            help='ranking within the nodes')
+                            help='node rank for distributed training')
 
         self.parser = parser
 
